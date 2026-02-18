@@ -1,4 +1,4 @@
-# Project 6: AI Supply Chain Subnet
+# AI Supply Chain Subnet
 
 ## Overview
 A decentralized supply chain analytics and optimization platform powered by Bittensor. Logistics experts and AI models collaborate to deliver real-time tracking, predictive analytics, and disruption risk assessments with on-chain transparency.
