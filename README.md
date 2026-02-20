@@ -34,6 +34,9 @@ A decentralized supply chain analytics and optimization platform powered by Bitt
 ## License
 MIT
 
+## Subnet Design Proposal
+See [`SUBNET_PROPOSAL.md`](SUBNET_PROPOSAL.md) for the full technical subnet design proposal, including incentive mechanism, miner/validator design, business logic, and go-to-market strategy.
+
 ## Full Documentation
 See `overview.md` for detailed problem/solution, architecture, and mechanism design.
 See `pitchdeck/` for pitch deck, demo video script, and visual guide.
