@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Supply Chain Subnet — Bittensor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="nav-logo">
+                <img src="/static/logo.png" alt="AI Supply Chain Subnet" class="logo-img"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback" style="display:none;">
+                    <svg viewBox="0 0 48 48" width="40" height="40">
+                        <path d="M24 4 L8 16 L8 36 L24 44 L40 36 L40 16 Z" fill="none" stroke="#2196F3" stroke-width="2"/>
+                        <circle cx="24" cy="24" r="6" fill="none" stroke="#43A047" stroke-width="1.5"/>
+                        <circle cx="24" cy="24" r="2" fill="#4CAF50"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="nav-title">
+                <h1>AI Supply Chain <strong>Subnet</strong></h1>
+                <p>Decentralized Supply Chain Intelligence — Powered by Bittensor & Yuma Consensus</p>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="subnet-badge">
+                <span class="live-dot"></span>
+                SUBNET #6 &bull; LIVE
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="main-content">
+        <div class="content-grid">
+
+            <!-- ===== LEFT PANEL: Demo Selector ===== -->
+            <div class="panel panel-input">
+                <div class="panel-header">
+                    <span class="panel-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2196F3" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </span>
+                    <h2>Subnet Demo Scripts</h2>
+                </div>
+
+                <!-- Demo Script 1 -->
+                <button class="demo-card active" id="btnDemo1" onclick="runDemo('demo1')">
+                    <div class="demo-card-top">
+                        <span class="demo-num">01</span>
+                        <span class="demo-task-badge">ETA Prediction</span>
+                    </div>
+                    <div class="demo-card-title">Ocean Freight ETA — Shanghai to LA</div>
+                    <div class="demo-card-desc">Typhoon warning, Shanghai port congestion moderate. 6 miners compete to predict delivery time.</div>
+                    <div class="demo-card-tags">
+                        <span class="demo-tag">COSCO</span>
+                        <span class="demo-tag">Electronics</span>
+                        <span class="demo-tag">Typhoon</span>
+                    </div>
+                </button>
+
+                <!-- Demo Script 2 -->
+                <button class="demo-card" id="btnDemo2" onclick="runDemo('demo2')">
+                    <div class="demo-card-top">
+                        <span class="demo-num">02</span>
+                        <span class="demo-task-badge task-risk">Disruption Risk</span>
+                    </div>
+                    <div class="demo-card-title">Disruption Risk — Shenzhen to Hamburg</div>
+                    <div class="demo-card-desc">Red Sea security elevated, Suez Canal congestion, EU customs changes. Full risk assessment.</div>
+                    <div class="demo-card-tags">
+                        <span class="demo-tag">Evergreen</span>
+                        <span class="demo-tag">Red Sea</span>
+                        <span class="demo-tag">Geopolitical</span>
+                    </div>
+                </button>
+
+                <!-- Demo Script 3 -->
+                <button class="demo-card" id="btnDemo3" onclick="runDemo('demo3')">
+                    <div class="demo-card-top">
+                        <span class="demo-num">03</span>
+                        <span class="demo-task-badge task-route">Route Optimization</span>
+                    </div>
+                    <div class="demo-card-title">Route Optimization — Busan to Long Beach</div>
+                    <div class="demo-card-desc">Pacific storm developing. Compare direct vs transshipment routes for perishable cargo.</div>
+                    <div class="demo-card-tags">
+                        <span class="demo-tag">HMM</span>
+                        <span class="demo-tag">Perishable</span>
+                        <span class="demo-tag">Storm</span>
+                    </div>
+                </button>
+
+                <div class="api-links">
+                    <a href="/docs" class="api-link">Swagger API</a>
+                    <a href="/redoc" class="api-link">ReDoc</a>
+                </div>
+            </div>
+
+            <!-- ===== RIGHT PANEL: Result ===== -->
+            <div class="panel panel-result">
+
+                <!-- Empty State -->
+                <div class="state-empty" id="stateEmpty">
+                    <div class="empty-icon">
+                        <svg viewBox="0 0 80 80" width="64" height="64">
+                            <path d="M40 8 L16 22 L16 50 L40 64 L64 50 L64 22 Z" fill="none" stroke="#1a3550" stroke-width="2"/>
+                            <circle cx="40" cy="36" r="10" fill="none" stroke="#1e3d5a" stroke-width="1.5"/>
+                            <circle cx="40" cy="36" r="4" fill="#1e3d5a" opacity="0.4"/>
+                            <path d="M30 36 L20 30" stroke="#1a3550" stroke-width="1"/>
+                            <path d="M50 36 L60 30" stroke="#1a3550" stroke-width="1"/>
+                            <path d="M40 46 L40 56" stroke="#1a3550" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <p class="empty-text">Select a demo script to broadcast a supply chain challenge to all miners on the subnet.</p>
+                    <p class="empty-text">Miners will compete to provide the best predictions.</p>
+                    <p class="empty-text">Validators will verify every prediction against ground truth data.</p>
+                </div>
+
+                <!-- Loading State -->
+                <div class="state-loading" id="stateLoading" style="display:none;">
+                    <div class="loader-container">
+                        <div class="loader-icon">
+                            <svg viewBox="0 0 48 48" width="44" height="44" class="spin-slow">
+                                <path d="M24 4 L8 14 L8 34 L24 44 L40 34 L40 14 Z" fill="none" stroke="#2196F3" stroke-width="2"/>
+                                <circle cx="24" cy="24" r="6" fill="none" stroke="#4CAF50" stroke-width="1.5"/>
+                                <circle cx="24" cy="24" r="2" fill="#4CAF50"/>
+                            </svg>
+                        </div>
+                        <div class="loader-text">
+                            <p class="loader-title">Broadcasting to subnet miners...</p>
+                            <div class="loader-steps" id="loaderSteps">
+                                <div class="loader-step active">
+                                    <span class="step-indicator"></span>
+                                    <span>Querying Bittensor subnet nodes...</span>
+                                </div>
+                                <div class="loader-step">
+                                    <span class="step-indicator"></span>
+                                    <span>Miners running prediction models...</span>
+                                </div>
+                                <div class="loader-step">
+                                    <span class="step-indicator"></span>
+                                    <span>Validators scoring predictions...</span>
+                                </div>
+                                <div class="loader-step">
+                                    <span class="step-indicator"></span>
+                                    <span>Reaching consensus &amp; distributing TAO...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loader-bar"><div class="loader-bar-fill" id="loaderBarFill"></div></div>
+                </div>
+
+                <!-- Result State -->
+                <div class="state-result" id="stateResult" style="display:none;"></div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
